@@ -1,0 +1,88 @@
+<div class="form-container">
+  <form [formGroup]="generalDetailsForm">
+
+    <!-- Title Input -->
+    <div>
+      <mat-form-field>
+        <mat-label>Title:</mat-label>
+        <input matInput type="text" formControlName="title">
+      </mat-form-field>
+    </div>
+
+    <!-- Description Textarea -->
+    <div>
+      <mat-form-field>
+        <mat-label>Description:</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+    </div>
+
+    <!-- Price Input -->
+    <div>
+      <mat-form-field>
+        <mat-label>Price:</mat-label>
+        <input matInput type="number" formControlName="price">
+      </mat-form-field>
+    </div>
+
+    <!-- Location Select -->
+    <div>
+      <mat-form-field>
+        <mat-label>Location:</mat-label>
+        <mat-select formControlName="location" (change)="updateSublocations()">
+          <mat-option *ngFor="let location of locations" [value]="location.location_id">{{ location.location }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Sublocation Select -->
+    <div>
+      <mat-form-field>
+        <mat-label>Sublocation:</mat-label>
+        <mat-select formControlName="sublocation">
+          <mat-option *ngFor="let sublocation of sublocations[generalDetailsForm.get('location')?.value]" [value]="sublocation.sublocation_id">{{ sublocation.sublocation }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Phone Number Input -->
+    <div>
+      <mat-form-field>
+        <mat-label>Phone Number:</mat-label>
+        <input matInput type="tel" formControlName="phone">
+      </mat-form-field>
+
+      <!-- Add Phone Number Button -->
+      <button mat-raised-button color="primary" type="button" (click)="addPhoneNumber()" [disabled]="disableAddButton">Add</button>
+
+      <!-- Display Added Phone Numbers -->
+      <div *ngIf="telephoneNumbers.length > 0">
+        <h3>Added Phone Numbers:</h3>
+        <mat-list>
+          <mat-list-item *ngFor="let number of telephoneNumbers; let i = index">
+            {{ number }}
+            <button mat-raised-button color="primary" type="button" (click)="removePhoneNumber(i)">Remove</button>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+
+    <!-- Add Images -->
+    <div>
+      <div>
+        <label>Images:</label>
+        <input type="file" (change)="addImage($event)" accept="image/*" multiple [disabled]="disableAddImageButton">
+      </div>
+
+      <!-- Display Added Images -->
+      <div *ngIf="imageFiles.length > 0">
+        <h3>Added Images:</h3>
+        <div *ngFor="let image of imageFiles; let i = index">
+          <img [src]="imagePreviews[i]" alt="Preview" width="100" height="100">
+          <button mat-raised-button color="primary" type="button" (click)="removeImage(i)">Remove</button>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

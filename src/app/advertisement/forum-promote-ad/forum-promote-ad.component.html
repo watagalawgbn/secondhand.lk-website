@@ -1,0 +1,54 @@
+<div class="form-container">
+    <form [formGroup]="promoteAdForm">
+  
+      <!-- Free Checkbox -->
+      <div>
+        <mat-checkbox formControlName="free">Free</mat-checkbox>
+      </div>
+  
+      <!-- Promotion Options -->
+      <div>
+        <div>
+          <!-- Bump Up Checkbox and Duration Selector -->
+          <mat-checkbox formControlName="bumpUp">Bump Up</mat-checkbox>
+          <mat-form-field>
+            <mat-select [(value)]="selectedDuration1">
+              <mat-option value="4Days">4 days</mat-option>
+              <mat-option value="7Days">7 days</mat-option>
+              <mat-option value="14Days">14 days</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <!-- Top Ad Checkbox and Duration Selector -->
+          <mat-checkbox formControlName="topAd">Top Ad</mat-checkbox>
+          <mat-form-field>
+            <mat-select [(value)]="selectedDuration2">
+              <mat-option value="4Days">4 days</mat-option>
+              <mat-option value="7Days">7 days</mat-option>
+              <mat-option value="14Days">14 days</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <!-- Urgent Checkbox and Duration Selector -->
+          <mat-checkbox formControlName="urgent">Urgent</mat-checkbox>
+          <mat-form-field>
+            <mat-select [(value)]="selectedDuration3">
+              <mat-option value="4Days">4 days</mat-option>
+              <mat-option value="7Days">7 days</mat-option>
+              <mat-option value="14Days">14 days</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <!-- Post Button -->
+      <button mat-button id="postButton" [disabled]="postChecked" (click)="onPostButtonClick()">Post</button>
+  
+      <!-- Continue Button -->
+      <button mat-button id="continueButton" [disabled]="promoteChecked">Continue</button>
+  
+    </form>
+  </div>
+  
