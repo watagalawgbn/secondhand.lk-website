@@ -1,0 +1,10 @@
+<div class="request-box" *ngFor="let userchat of userchats">
+    <div class="request-description">
+        <p>Contact request id: {{ userchat.chat_id }}</p><br>
+        <p>Requesting User ID: {{ userchat.requesting_user_id }}</p><br>
+        <p>Request detail: {{ userchat.request_detail }}</p><br>
+    </div>
+    <div class="req-btn">
+        <button type="submit" class="btn-req">Chat</button>
+    </div>
+</div>

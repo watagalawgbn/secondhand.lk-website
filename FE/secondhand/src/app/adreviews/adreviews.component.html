@@ -1,0 +1,30 @@
+<div class="adreview-box" *ngFor="let vehicle of vehicles">
+  <div class="add-data">
+    <div class="image-view">
+      <img src="../../assets/Rectangle 31.png" alt="Vehicle Image">
+    </div> 
+    <div class="add-description">
+      <p><strong>Title:</strong> {{ vehicle.title }}</p>
+      <p><strong>Description:</strong> {{ vehicle.description }}</p>
+      <p><strong>Make:</strong> {{ vehicle.make }}</p>
+      <p><strong>Model:</strong> {{ vehicle.model }}</p>
+    </div>
+  </div> 
+  <div class="details">
+    <p><strong>Year:</strong> {{ vehicle.year }}</p>
+    <p><strong>Mileage:</strong> {{ vehicle.mileage }}</p>
+    <p><strong>Price:</strong> Rs.{{ vehicle.price }}</p>
+    <p><strong>Location:</strong> {{ vehicle.location }}</p>
+    <p><strong>Contact Email:</strong> {{ vehicle.contact_email }}</p>
+    <p><strong>Contact Phone:</strong> {{ vehicle.contact_phone }}</p>
+    <p><strong>Created At:</strong> {{ vehicle.created_at | date:'medium' }}</p>
+  </div> 
+  <div class="btns">
+    <div class="accept">
+      <button type="button" class="accept-btn" (click)="acceptAd(vehicle.id)">Accept Ad</button>
+    </div>
+    <div class="decline">
+      <button type="button" class="decline-btn" >Decline Ad</button>
+    </div>
+  </div>
+</div>

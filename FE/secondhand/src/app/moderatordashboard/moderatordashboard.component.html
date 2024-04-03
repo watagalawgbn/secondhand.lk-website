@@ -1,0 +1,26 @@
+
+<div class="container">
+    <div class="dashboard-box">
+        <div class="element" routerLink="/dashboard/adreview"> 
+            <i class="pi pi-verified" style="color: white"></i>
+            <p>Ad Reviews</p>
+        </div>
+        <div class="element" routerLink="/dashboard/userreporting"> 
+            <i class="pi pi-ban" style="color: white"></i>
+            <p>User Reportings</p>
+        </div>
+        <div class="element" routerLink="/dashboard/requests"> 
+            <i class="pi pi-users" style="color: white"></i>
+            <p>Chat Requests</p>
+        </div>
+        <div class="element" routerLink="/dashboard/statistics"> 
+            <i class="pi pi-chart-line" style="color: white"></i>
+            <p>Statistics</p>
+        </div>
+    </div>
+    
+   <div class="view">
+    <router-outlet></router-outlet> 
+   </div>
+    
+</div>

@@ -1,0 +1,34 @@
+.request-box{
+    width: 600px; 
+    color: #304E74;
+    border: 1px solid #304E74;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px #2A7AAD solid;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgb(255, 253, 249);
+}
+.req-btn{
+    margin-left: auto;
+}
+.btn-req{
+    width: 100px;
+    height: 40px;
+    background-color: #2A7AAD;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border:white solid 2px;
+}
+.request-description{
+    color: #304E74;
+}
+
+.btn-req:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}

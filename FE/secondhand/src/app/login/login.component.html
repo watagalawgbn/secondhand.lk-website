@@ -1,0 +1,30 @@
+<div class="login-box">
+    <div class="login-container">
+        <div class="welcome">
+            <div class="welcome-text">
+                <h1>WELCOME</h1>
+            </div>
+            <div class="welcome-image">
+                <img src="../../assets/welcomeimage.png" alt="no" class="img-fluid">
+            </div>
+        </div>
+        <div class="text-input">
+            <div class="login-text">
+                <p class="mb-4">Moderator Panel Login</p>
+            </div>
+            <div class="user-name form-group">
+                <input type="email" [(ngModel)]="email" class="form-control" placeholder="email">
+            </div>
+            <div class="password form-group">
+                <input type="password" [(ngModel)]="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-btn">
+                <button type="button" class="btn btn-primary btn-block" (click)="login()">Login</button>
+            </div>
+            
+            <div *ngIf="error" class="alert" role="alert">
+                {{ error }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+
+
+<div class="report-box" *ngFor="let userreporting of userreportings"> 
+    <div class="report-description">
+        <p>Report id: {{ userreporting.reportid }}</p><br>
+        <p>Report category: {{ userreporting.reported_category }}</p><br>
+        <p>Reporting note: {{ userreporting.reporting_note }}</p><br>
+        <p>Reporting User id: {{ userreporting.reporting_userid }}</p><br>
+        <p>Reported User id: {{ userreporting.reported_userid }}</p><br>
+    </div>
+    <div class="btns">
+        <div class="ban-user">
+            <button type="submit" class="btn-danger" (click)="banuser(userreporting.reportid)">Ban Reported User</button>
+        </div>
+        <div class="view-profile">
+            <button type="submit" class="btn-view">View Profile</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+.adreview-box {
+    width: 600px; 
+    color: #304E74;
+    border: 1px solid #304E74;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px #2A7AAD solid;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgb(255, 253, 249);
+}
+
+.add-data{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid;
+}
+
+.details{
+    color: #304E74;
+    border-bottom: 1px solid;
+}
+
+.add-description{
+    color: #304E74;
+    margin-left: 5%;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 5%;
+}
+
+.accept{
+    padding-right: 10%;
+}
+
+.accept-btn{
+    width: 100px;
+    height: 40px;
+    background-color: #2A7AAD;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border:white solid 2px;
+}
+
+.decline-btn{
+    width: 100px;
+    height: 40px;
+    background-color: crimson;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border:white solid 2px;
+}
+
+.accept-btn:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.decline-btn:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+img{
+    height: 200px;
+    width: 300px;
+}
