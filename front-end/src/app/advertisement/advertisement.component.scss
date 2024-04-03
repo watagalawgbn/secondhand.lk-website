@@ -1,0 +1,95 @@
+.stepper {
+    background-color: #f7f7f7; /* Replace with the desired color code */
+    padding: 2% 5%;
+}
+
+
+
+.parent-container.disabled {
+    pointer-events: none; /* Disable mouse interactions */
+    opacity: 0.5; /* Optionally adjust opacity to indicate disabled state */
+  }
+
+.stepper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.next_btn {
+  float: right;
+  background-color: #2A7AAD;
+  border: none;
+  border-radius: 0.7vw;
+  color: white;
+  padding: 1.2vw 3vw;
+  cursor: pointer;
+}
+
+.next_btn:disabled {
+  background-color: #bee4fc; /* Change background color when disabled */
+}
+
+.back_btn {
+  float: left;
+  background-color: #2A7AAD;
+  border: none;
+  border-radius: 0.7vw;
+  color: white;
+  padding: 1.2vw 3vw;
+  cursor: pointer;
+}
+
+.back_btn:disabled {
+  background-color: #bee4fc; /* Change background color when disabled */
+}
+
+
+/* Override focus styles for Angular Material stepper */
+::ng-deep .mat-horizontal-stepper-header-container{
+  background-color: #ffffff;
+  border-radius: 5vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+::ng-deep .mat-stepper-horizontal-line{
+  border-top-color: rgb(0, 0, 0) !important;
+  border-top-style: dashed !important;
+}
+::ng-deep .mat-primary.mat-step-header{
+  border-radius: 5vw;
+}
+::ng-deep .mat-primary.mat-step-header:focus[aria-selected="true"]{
+  background-color: #bee4fc;
+}
+
+
+
+// snackbar styles
+::ng-deep .customSnackbar2 {
+  border-radius: .5vw;
+  outline: 2px solid red;
+  --mdc-snackbar-container-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+  backdrop-filter: blur(1px); /* Apply blur effect */
+  --mdc-snackbar-supporting-text-color:red;
+}
+::ng-deep .customSnackbar2 button{
+  color: white !important;
+  background-color:red;
+}
+
+::ng-deep .customSnackbar1 {
+  border-radius: .5vw;
+  outline: 2px solid #2a9af3;
+  --mdc-snackbar-container-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+  backdrop-filter: blur(1px); /* Apply blur effect */
+  --mdc-snackbar-supporting-text-color:#2a9af3;
+}
+::ng-deep .customSnackbar1 button{
+  color: white !important;
+  background-color:#2a9af3;
+}
+
+
+
+

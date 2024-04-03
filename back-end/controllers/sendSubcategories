@@ -1,0 +1,14 @@
+const db = require('../models/db');
+
+const sendSubcategories = (req, res, next) => {
+    db.query('SELECT * FROM subcategory', (error, results) => {
+        if (error) {
+          console.error(error);
+          res.status(500).json({ error: 'Error fetching subcategories' });
+        } else {
+          res.json(results);
+        }
+      });
+}
+
+module.exports = { sendSubcategories };

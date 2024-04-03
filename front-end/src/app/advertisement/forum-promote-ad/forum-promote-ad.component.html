@@ -1,0 +1,65 @@
+<div class="formContainer">
+
+  <div class="headerText">
+    <p id="headerT">Promote your Ad</p>
+    <p id="linkExt">Learn more</p>
+  </div>
+  
+  <form [formGroup]="promoteAdForm">
+  
+    <!-- Free Checkbox -->
+    <div>
+      <mat-checkbox formControlName="free" color="primary">Free</mat-checkbox>
+    </div>
+
+    <mat-divider class="divider"></mat-divider>
+  
+    <!-- Promotion Options -->
+    <div class="promotions">
+      <div class="promotionCheck">
+        <!-- Bump Up Checkbox and Duration Selector -->
+        <mat-checkbox formControlName="bumpUp" color="primary">Bump Up</mat-checkbox>
+        <mat-form-field>
+          <mat-select [(value)]="selectedDuration1">
+            <mat-option value="4Days">4 days(Rs.1200)</mat-option>
+            <mat-option value="7Days">7 days(Rs.2000)</mat-option>
+            <mat-option value="14Days">14 day(Rs. 2700)s</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="promotionCheck">
+        <!-- Top Ad Checkbox and Duration Selector -->
+        <mat-checkbox formControlName="topAd" color="primary">Top Ad</mat-checkbox>
+        <mat-form-field>
+          <mat-select [(value)]="selectedDuration2">
+            <mat-option value="4Days">4 days(Rs.1200)</mat-option>
+            <mat-option value="7Days">7 days(Rs.2000)</mat-option>
+            <mat-option value="14Days">14 day(Rs. 2700)s</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="promotionCheck">
+        <!-- Urgent Checkbox and Duration Selector -->
+        <mat-checkbox formControlName="urgent" color="primary">Urgent</mat-checkbox>
+        <mat-form-field>
+          <mat-select [(value)]="selectedDuration3">
+            <mat-option value="4Days">4 days(Rs.1200)</mat-option>
+            <mat-option value="7Days">7 days(Rs.2000)</mat-option>
+            <mat-option value="14Days">14 day(Rs. 2700)s</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <mat-divider class="divider"></mat-divider>
+
+    <div class="btnChange">
+      <!-- Post Button -->
+      <button mat-raised-button color="primary" id="postButton" [disabled]="postChecked" (click)="onPostButtonClick()">Post</button>
+  
+      <!-- Continue Button -->
+      <button mat-raised-button color="primary" id="continueButton" [disabled]="promoteChecked">Continue</button>
+    </div>
+  
+  </form>
+</div>
